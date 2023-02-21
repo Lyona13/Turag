@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Pages name="Страницы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ГруппаПолучениеДокументовОтТуриста" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение документов от туриста</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПолучениеДокументовОтТуристаРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="ПолучениеДокументовОтТуриста" id="56">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПолучениеДокументовОтТуриста</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПолучениеДокументовОтТуристаКонтекстноеМеню" id="57"/>
+							<AutoCommandBar name="ПолучениеДокументовОтТуристаКоманднаяПанель" id="58"/>
+							<ExtendedTooltip name="ПолучениеДокументовОтТуристаРасширеннаяПодсказка" id="59"/>
+							<SearchStringAddition name="ПолучениеДокументовОтТуристаСтрокаПоиска" id="60">
+								<AdditionSource>
+									<Item>ПолучениеДокументовОтТуриста</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолучениеДокументовОтТуристаСтрокаПоискаКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ПолучениеДокументовОтТуристаСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПолучениеДокументовОтТуристаСостояниеПросмотра" id="63">
+								<AdditionSource>
+									<Item>ПолучениеДокументовОтТуриста</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолучениеДокументовОтТуристаСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ПолучениеДокументовОтТуристаСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПолучениеДокументовОтТуристаУправлениеПоиском" id="66">
+								<AdditionSource>
+									<Item>ПолучениеДокументовОтТуриста</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолучениеДокументовОтТуристаУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ПолучениеДокументовОтТуристаУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПолучениеДокументовОтТуристаНомерСтроки" id="69">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаНомерСтрокиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаНомерСтрокиРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<InputField name="ПолучениеДокументовОтТуристаТурист" id="72">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.Турист</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаТуристКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаТуристРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<InputField name="ПолучениеДокументовОтТуристаКоличествоЧеловек" id="75">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.КоличествоЧеловек</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаКоличествоЧеловекКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаКоличествоЧеловекРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="ПолучениеДокументовОтТуристаДетиВПаспорте" id="78">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.ДетиВПаспорте</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаДетиВПаспортеКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаДетиВПаспортеРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="ПолучениеДокументовОтТуристаПаспорт" id="81">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.Паспорт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаПаспортКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаПаспортРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<InputField name="ПолучениеДокументовОтТуристаКсерокопия1йСтраницы" id="84">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.Ксерокопия1йСтраницы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаКсерокопия1йСтраницыКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаКсерокопия1йСтраницыРасширеннаяПодсказка" id="86"/>
+								</InputField>
+								<InputField name="ПолучениеДокументовОтТуристаФотография" id="87">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.Фотография</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаФотографияКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаФотографияРасширеннаяПодсказка" id="89"/>
+								</InputField>
+								<CheckBoxField name="ПолучениеДокументовОтТуристаСправкаСМестаРаботы" id="90">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.СправкаСМестаРаботы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПолучениеДокументовОтТуристаСправкаСМестаРаботыКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаСправкаСМестаРаботыРасширеннаяПодсказка" id="92"/>
+								</CheckBoxField>
+								<InputField name="ПолучениеДокументовОтТуристаСвидетельствоОРожденииОригинал" id="93">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.СвидетельствоОРожденииОригинал</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаСвидетельствоОРожденииОригиналКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаСвидетельствоОРожденииОригиналРасширеннаяПодсказка" id="95"/>
+								</InputField>
+								<InputField name="ПолучениеДокументовОтТуристаСвидетельствоОРожденииКопия" id="96">
+									<DataPath>Объект.ПолучениеДокументовОтТуриста.СвидетельствоОРожденииКопия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучениеДокументовОтТуристаСвидетельствоОРожденииКопияКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ПолучениеДокументовОтТуристаСвидетельствоОРожденииКопияРасширеннаяПодсказка" id="98"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаВыдачаДокументов" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выдача документов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаВыдачаДокументовРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<Table name="ВыдачаДокументов" id="17">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ВыдачаДокументов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВыдачаДокументовКонтекстноеМеню" id="18"/>
+							<AutoCommandBar name="ВыдачаДокументовКоманднаяПанель" id="19"/>
+							<ExtendedTooltip name="ВыдачаДокументовРасширеннаяПодсказка" id="20"/>
+							<SearchStringAddition name="ВыдачаДокументовСтрокаПоиска" id="21">
+								<AdditionSource>
+									<Item>ВыдачаДокументов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыдачаДокументовСтрокаПоискаКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="ВыдачаДокументовСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВыдачаДокументовСостояниеПросмотра" id="24">
+								<AdditionSource>
+									<Item>ВыдачаДокументов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыдачаДокументовСостояниеПросмотраКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ВыдачаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВыдачаДокументовУправлениеПоиском" id="27">
+								<AdditionSource>
+									<Item>ВыдачаДокументов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыдачаДокументовУправлениеПоискомКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="ВыдачаДокументовУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВыдачаДокументовНомерСтроки" id="30">
+									<DataPath>Объект.ВыдачаДокументов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВыдачаДокументовНомерСтрокиКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ВыдачаДокументовНомерСтрокиРасширеннаяПодсказка" id="32"/>
+								</LabelField>
+								<InputField name="ВыдачаДокументовДокумент" id="33">
+									<DataPath>Объект.ВыдачаДокументов.Документ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВыдачаДокументовДокументКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ВыдачаДокументовДокументРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="ВыдачаДокументовДатаГотовности" id="36">
+									<DataPath>Объект.ВыдачаДокументов.ДатаГотовности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВыдачаДокументовДатаГотовностиКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ВыдачаДокументовДатаГотовностиРасширеннаяПодсказка" id="38"/>
+								</InputField>
+								<CheckBoxField name="ВыдачаДокументовГотовность" id="39">
+									<DataPath>Объект.ВыдачаДокументов.Готовность</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыдачаДокументовГотовностьКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ВыдачаДокументовГотовностьРасширеннаяПодсказка" id="41"/>
+								</CheckBoxField>
+								<InputField name="ВыдачаДокументовСпособВыдачи" id="42">
+									<DataPath>Объект.ВыдачаДокументов.СпособВыдачи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВыдачаДокументовСпособВыдачиКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ВыдачаДокументовСпособВыдачиРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<CheckBoxField name="ВыдачаДокументовВыдача" id="45">
+									<DataPath>Объект.ВыдачаДокументов.Выдача</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыдачаДокументовВыдачаКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ВыдачаДокументовВыдачаРасширеннаяПодсказка" id="47"/>
+								</CheckBoxField>
+								<InputField name="ВыдачаДокументовДатаВыдачи" id="48">
+									<DataPath>Объект.ВыдачаДокументов.ДатаВыдачи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВыдачаДокументовДатаВыдачиКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ВыдачаДокументовДатаВыдачиРасширеннаяПодсказка" id="50"/>
+								</InputField>
+								<InputField name="ВыдачаДокументовКоличество" id="51">
+									<DataPath>Объект.ВыдачаДокументов.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВыдачаДокументовКоличествоКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ВыдачаДокументовКоличествоРасширеннаяПодсказка" id="53"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="ПолучательДокументов" id="7">
+			<DataPath>Объект.ПолучательДокументов</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПолучательДокументовКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПолучательДокументовРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Ответственный" id="10">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="12"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ВыдачаДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
